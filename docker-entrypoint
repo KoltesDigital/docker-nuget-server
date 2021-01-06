@@ -32,7 +32,7 @@ elif [ "$#" == "0" ];then
 
   # Set server name.
   if [ -n "${NGINX_SERVER_NAME}" ];then
-    echo "Using specified server name: ${NGINX_SERVER_NAME}"
+    echo "Using specified server name (only for Nginx): ${NGINX_SERVER_NAME}"
     sed -i -e "s/server_name.*/server_name ${NGINX_SERVER_NAME};/" /etc/nginx/conf.d/nuget.conf
   else
     if [ -z ${SERVER_NAME} ];then
@@ -45,7 +45,7 @@ elif [ "$#" == "0" ];then
 
   # Set server port.
   if [ -n "${NGINX_SERVER_PORT}" ];then
-      echo "Using specified port: ${NGINX_SERVER_PORT}"
+      echo "Using specified port (only for Nginx): ${NGINX_SERVER_PORT}"
       sed -i -e "s/listen 80/listen ${NGINX_SERVER_PORT}/" /etc/nginx/conf.d/nuget.conf
   else
     if [ -z ${SERVER_PORT} ];then
