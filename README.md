@@ -72,6 +72,10 @@ volumes:
 
   **Note:** If use `host` network mode,you can set `SERVER_PORT` value  to change nuget server port.
 
+* `NGINX_SERVER_NAME`:  override `SERVER_NAME` in Nginx config. Use it when the container is not facing the outside world, e.g. when there is another reverse proxy.
+
+* `NGINX_SERVER_PORT`:  override `SERVER_PORT` in Nginx config.
+
 ## Volumes
 * `/var/www/simple-nuget-server/db` Path with SQLite database.
 * `/var/www/simple-nuget-server/packagefiles` Path with nuget packages save.
