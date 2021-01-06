@@ -64,7 +64,7 @@ elif [ "$#" == "0" ];then
   
   if [ -n "${BASE_URL}" ];then
     echo "Use base URL: ${BASE_URL}"
-    sed -i -e "/fastcgi_temp_file_write_size.*$/a\        fastcgi_param BASE_URL ${BASE_URL};" /etc/nginx/nginx.conf
+    sed -i -e "/fastcgi_temp_file_write_size.*$/a\        fastcgi_param BASE_URL ${BASE_URL};" /etc/nginx/conf.d/nuget.conf
   fi
 
   # Set folder property.
